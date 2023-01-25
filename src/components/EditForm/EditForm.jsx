@@ -1,19 +1,38 @@
-import { useState } from 'react';
-import { useUpdateContactMutation } from '../../redux/contactsSliceApi';
+/*import { useState } from 'react';
+
 import {
   EditPhonebookForm,
   EditPhonebookLabel,
   EditPhonebookInput,
-  EditPhonebookButton,
   EditPhonebookCheckbox,
-  EditPhonebookCheckboxLabel
+  EditPhonebookCheckboxLabel,
 } from './EditForm.styled';
+
+import { Button } from '@chakra-ui/react';
+import { useGetContactsQuery, useUpdateContactMutation } from 'redux/contactsSliceApi';
+import { localStrg } from 'localStrg';
 
 export default function EditForm({ initialValues, onSubmit }) {
   const [updateContact] = useUpdateContactMutation();
-  const [name, setName] = useState(initialValues.name);
-  const [phone, setPhone] = useState(initialValues.phone);
-  const [personal, setPersonal] = useState(initialValues.personal);
+  const { data: contacts } = useGetContactsQuery();
+  const RENDER_STORAGE_KEY = 'contact-for-render-state';
+
+  // console.log (contacts)
+  let corectionContacts = contacts => {
+    if (contacts)
+      return contacts.filter(contact => contact.id === initialValues.id);
+  };
+
+  const contactForEdit = corectionContacts(contacts);
+  // console.log(
+  //   'contactForEdit:',
+  //   contactForEdit.at(0).name,
+  //   contactForEdit.at(0).number
+  // );
+  const id = initialValues.id;
+  const [name, setName] = useState(contactForEdit.at(0).name);
+  const [number, setNumber] = useState(contactForEdit.at(0).number);
+  const [personal, setPersonal] = useState(true);
 
   const handleChange = event => {
     switch (event.target.name) {
@@ -22,7 +41,7 @@ export default function EditForm({ initialValues, onSubmit }) {
         break;
 
       case 'phone':
-        setPhone(event.target.value);
+        setNumber(event.target.value);
         break;
 
       default:
@@ -34,12 +53,61 @@ export default function EditForm({ initialValues, onSubmit }) {
     value.preventDefault();
 
     try {
-      await updateContact({ id: initialValues.id, name, phone, personal });
+      await updateContact({ id: initialValues.id, name, number });
     } catch (error) {
       console.log(error);
     }
+    updateLocalStorage();
     onSubmit();
   };
+
+  function updateLocalStorage() {
+    if (!localStrg.load(RENDER_STORAGE_KEY)) {
+      addContactToLocal();
+    } else {
+      editContactToLocal();
+    }
+  }
+
+  function addContactToLocal() {
+    localStrg.save(RENDER_STORAGE_KEY, []);
+    let currentContactsState = localStrg.load(RENDER_STORAGE_KEY);
+    const contactsFromBack = contacts;
+
+    localStrg.save(RENDER_STORAGE_KEY, contactsFromBack);
+    currentContactsState = localStrg.load(RENDER_STORAGE_KEY);
+    currentContactsState.map(contact => (contact.personal = true));
+    localStrg.save(RENDER_STORAGE_KEY, currentContactsState);
+  }
+
+  function editContactToLocal() {
+    let currentContactsState = localStrg.load(RENDER_STORAGE_KEY);
+
+    let correctContactPersonIndex;
+    if (currentContactsState) {
+      currentContactsState.find(
+        contact => contact.name === contactForEdit.at(0).name
+      );
+      correctContactPersonIndex = currentContactsState.findIndex(
+        contact => contact.name === contactForEdit.at(0).name
+      );
+
+      if (correctContactPersonIndex < 0) {
+        currentContactsState.push({ id, name, number, personal });
+      } else {
+        currentContactsState.splice(correctContactPersonIndex, 1, {
+          id,
+          name,
+          number,
+          personal,
+        });
+      }
+      // console.log('currentContactsState:', currentContactsState);
+      localStrg.save(RENDER_STORAGE_KEY, currentContactsState);
+    }
+    // console.log('correctContactPerson:', correctContactPerson);
+    // console.log('correctContactPersonIndex:', correctContactPersonIndex);
+  }
 
   return (
     <EditPhonebookForm onSubmit={handleSubmit}>
@@ -68,14 +136,41 @@ export default function EditForm({ initialValues, onSubmit }) {
         <EditPhonebookInput
           type="tel"
           name="phone"
-          value={phone}
+          value={number}
           onChange={handleChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </EditPhonebookLabel>
-      <EditPhonebookButton type="submit">Save change</EditPhonebookButton>
+    
+      <Button
+        type="submit"
+        colorScheme="messenger"
+        borderWidth="1px"
+        borderColor="messenger"
+        m="12px auto 2px auto"
+        p="2px 20px 4px 20px"
+        fontSize="24px"
+        _hover={{
+          bg: 'messenger',
+          color: 'white',
+          borderWidth: '1px',
+          borderColor: 'orange',
+          fontSize: '25',
+        }}
+        _active={{
+          bg: 'tomato',
+          color: 'teal.500',
+        }}
+        _selected={{
+          bg: 'tomato',
+          color: 'white',
+        }}
+      >
+        Save change
+      </Button>
     </EditPhonebookForm>
   );
 }
+*/

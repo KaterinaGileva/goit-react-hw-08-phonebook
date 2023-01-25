@@ -3,7 +3,7 @@ import { selectFilterValue } from 'redux/selectors';
 import { setFilter } from 'redux/filterSlice';
 import { FilterLabel, FilterInput, FilterDiv, FilterTitle } from './Filter.styled';
 import { RiSearchLine } from 'react-icons/ri';
-import StatusFilter from 'components/StatusFilter/StatusFilter';
+import { StatusFilter } from 'components/StatusFilter/StatusFilter';
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,6 @@ const Filter = () => {
   return (
     <FilterLabel>
       <FilterTitle>Find contacts by Name</FilterTitle>
-      <StatusFilter />
       <FilterDiv>
         <RiSearchLine
           style={{
@@ -28,8 +27,11 @@ const Filter = () => {
           type="text"
           value={filter}
           onChange={handleFilterChange}
+          placeholder="Anny Benne"
         ></FilterInput>
+
       </FilterDiv>
+      <StatusFilter />
     </FilterLabel>
   );
 };
