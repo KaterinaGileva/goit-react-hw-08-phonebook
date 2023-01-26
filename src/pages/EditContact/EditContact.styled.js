@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import { NavLink } from 'react-router-dom';
 
 export const Overlay = styled.div`
   background-color: #1e2129;
@@ -55,6 +56,7 @@ export const ModalButton = styled.button`
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   :hover,
   :focus {
     border: 2px solid;

@@ -1,4 +1,4 @@
-/*import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 // import { useGetContactByIdQuery } from '../../redux/contactsSliceApi';
 import { Overlay, Modal, ModalTitle } from './EditContact.styled';
 import EditForm from '../../components/EditForm/EditForm';
@@ -64,4 +64,3 @@ export default function EditContact({ name, number }) {
     </Overlay>
   );
 }
-*/

@@ -1,10 +1,9 @@
 import { useAuth } from 'hooks';
 import { logOut } from 'redux/auth/operations';
-
+import { UserNavConteiner, UserNavText } from './UserNav.styled';
 import { NavLink } from 'react-router-dom';
 import { Button } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
-import { UserNavConteiner, UserNavText } from './User.styled';
 
 export const UserNav = () => {
   const { user } = useAuth();

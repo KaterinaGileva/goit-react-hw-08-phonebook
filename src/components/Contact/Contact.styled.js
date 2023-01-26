@@ -8,9 +8,11 @@ export const ContactItem = styled.li`
   padding: 5px 5px;
   border: 2px solid rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+
   :last-child {
     margin-bottom: 0;
   }
+
   :hover,
   :focus {
     border: 2px solid;
@@ -30,22 +32,22 @@ display: inline-flex;
   height: 30px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 875;
+  line-height: 1,875;
   text-transform: uppercase;
-  background-color: #2196f3;
-  border: 2px solid;
-  border-color: #2196f3;
-  color: #ffffff;
+  background-color: blue;
+  color: yellow;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   :hover,
   :focus {
     border: 2px solid;
-    background-color: #21d4f3;
+    background-color: white;
+    color:
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /* transform: scale(1.01); */
+    
   }
 `;
 

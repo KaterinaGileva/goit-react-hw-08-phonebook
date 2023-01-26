@@ -9,7 +9,7 @@ export const Container = styled.div`
   padding: 20px;
   border: 2px solid #dbb858;
   border-radius: 10px;
-  background-color: #c3e6afea;
+  background-color: yellow;
 `;
 
 export const HeaderNav = styled.nav`
@@ -23,9 +23,11 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   top: 0;
+
   padding: 0 10px 0 auto;
   border: 2px solid blue;
   border-radius: 10px;
+
   > nav {
     display: flex;
   }

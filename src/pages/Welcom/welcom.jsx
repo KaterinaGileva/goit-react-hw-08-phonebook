@@ -1,4 +1,4 @@
-import { Container, ContainerTitle, ContainerText } from './Welcome.styled';
+import { Container, ContainerTitle, ContainerText } from './welcome.styled';
 
 export default function Welcome() {
   return (

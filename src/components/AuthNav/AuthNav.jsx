@@ -7,7 +7,7 @@ export const AuthNav = () => {
       <ButtonGroup gap="4" p="20px 0 20px 0">
         <Button
           as={NavLink}
-          to="/welcome"
+          to="/welcom"
           end
           colorScheme="messenger"
           borderWidth="1px"

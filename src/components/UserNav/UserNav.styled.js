@@ -1,37 +1,44 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-export const LoginFormStyle = styled.form`
+export const UserNavConteiner = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
-  margin: 20px 0 0 0;
+  
+  justify-content: space-between;
+  max-width: auto;
+  margin: 20px;
   padding: 20px;
   border: 2px solid #dbb858;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #e5e7c5;
+  background-color: #c3e6afea;
+
+  
 `;
 
-export const LoginLabel = styled.label`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+export const Link = styled(NavLink)`
+  margin: 5px 40px 5px 0;
+  padding: 8px 8px;
+  border: 2px solid blue;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+  font-size: 24px;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1, 875;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.active {
+    color: white;
+    background-color: #1565c0;
+    box-shadow: 2px 2px 5px #fc894d;
+  }
+
+  :hover {
+    transform: scale(1.02);
+  }
 `;
 
-export const LoginInput = styled.input`
-  font: inherit;
-  padding: 8px;
-  margin: 8px 0 8px 0;
-  border: solid 1px;
-  border-radius: 8px;
-  border-color: blue;
-`;
-
-export const LoginButton = styled.button`
+export const LogoutButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +58,7 @@ export const LoginButton = styled.button`
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   :hover,
   :focus {
     border: 2px solid;
@@ -60,9 +68,11 @@ export const LoginButton = styled.button`
   }
 `;
 
-export const LoginH1 = styled.h1`
+export const UserNavText = styled.p`
   display: flex;
   justify-content: center;
-  font-size: 24px;
+
   font-weight: 700;
+  font-size: 20px;
+  margin: 10px 0 0 0;
 `;

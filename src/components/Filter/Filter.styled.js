@@ -14,18 +14,20 @@ export const FilterLabel = styled.label`
 export const FilterInput = styled.input`
   font: inherit;
   padding: 8px;
-  margin: 8px 0 8px 8px;
+  margin: 10px 0 10px 8px;
   max-width: 80%;
+  
   border-radius: 8px;
   border-color: blue;
 `;
 
 export const FilterDiv = styled.div`
-display: flex;
-align-items: center;
-margin-left: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
 `;
 
 export const FilterTitle = styled.h2`
-margin-left: 50px;
+  margin-left: 50px;
+  
 `;

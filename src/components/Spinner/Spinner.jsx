@@ -7,7 +7,7 @@ export default function Spinner() {
             <Puff
   height="80"
   width="80"
-  radius={1}
+  radisu={1}
   color="#4fa94d"
   ariaLabel="puff-loading"
   wrapperStyle={{}}
@@ -23,5 +23,3 @@ const Loader = styled.div`
   display: flex;
   justify-content: center;
 `;
-
-

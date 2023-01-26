@@ -5,17 +5,16 @@ import {
   ContactButtonDiv,
 } from './Contact.styled';
 import { useDeleteContactMutation } from '../../redux/contactsSliceApi';
-
+import { useNavigate } from 'react-router-dom';
 import { RiFunctionFill } from 'react-icons/ri';
 import { RiStarSFill } from 'react-icons/ri';
 import { RiDeleteBin5Line } from 'react-icons/ri';
-
-import { localStrg } from 'localStrg';
-
+import { RiEdit2Fill } from 'react-icons/ri';
+import { localStrg } from '../../helpers/localStrg';
 
 export default function Contact({ id, name, number }) {
   // console.log('name:', {name, phone, id})
-  
+  const navigate = useNavigate();
   const [deleteContact, { isLoading }] = useDeleteContactMutation();
   const RENDER_STORAGE_KEY = 'contact-for-render-state';
 
@@ -97,7 +96,16 @@ export default function Contact({ id, name, number }) {
           />
           Delete
         </ContactButton>
-       
+        <ContactButton type="button" onClick={() => navigate(`/${id}`)}>
+          <RiEdit2Fill
+            style={{
+              color: `orange`,
+              width: 24,
+              height: 24,
+            }}
+          />
+          Edit
+        </ContactButton>
       </ContactButtonDiv>
     </ContactItem>
   );

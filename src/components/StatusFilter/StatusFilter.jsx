@@ -1,10 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Button } from 'components/Button/Button';
-
+import { statusFilters } from 'redux/constants';
 import { selectFilterStatus } from 'redux/selectors';
 import { setStatusFilter } from 'redux/filterSlice';
 import { WraperFilterStatus } from './StatusFilter.styled';
-import { statusFilters } from 'redux/constans';
 
 export const StatusFilter = () => {
   const dispatch = useDispatch();

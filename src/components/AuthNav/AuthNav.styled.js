@@ -12,11 +12,13 @@ export const Link = styled(NavLink)`
   font-size: 24px;
   font-weight: 700;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &.active {
     color: white;
     background-color: #1565c0;
     box-shadow: 2px 2px 5px #fc894d;
   }
+
   :hover {
     transform: scale(1.02);
   }

@@ -1,23 +1,22 @@
-import * as React from 'react';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
+import { register } from 'redux/auth/operations';
 import {
-  LoginH1,
-  LoginFormStyle,
-  LoginLabel,
-  LoginInput,
-  // LoginButton,
-} from './LoginForm.styled';
+  RegisterFormStyle,
+  RegisterLabel,
+  RegisterInput,
+  RegisterH1,
+} from './RegisterForm.styled';
 import { Button } from '@chakra-ui/react';
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      logIn({
+      register({
+        name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -26,31 +25,40 @@ export const LoginForm = () => {
   };
 
   return (
-    <LoginFormStyle onSubmit={handleSubmit} autoComplete="off">
-      <LoginH1> Log in</LoginH1>
-
-      <LoginLabel>
+    <RegisterFormStyle onSubmit={handleSubmit} /*autoComplete="off"*/>
+      <RegisterH1> Register</RegisterH1>
+      <RegisterLabel>
+        Username
+        <RegisterInput 
+        placeholder="Enter your name" 
+        autoComplete="name"
+        type="text" 
+        name="name"
+         />
+      </RegisterLabel>
+      <RegisterLabel>
         Email
-        <LoginInput 
-        placeholder="Enter your email" 
-        type="email" 
-        name="email"
-        autoComplete="email" />
-      </LoginLabel>
-
-      <LoginLabel>
+        <RegisterInput
+          placeholder="Enter your email"
+          autoComplete="email"
+          type="email"
+          name="email"
+        />
+      </RegisterLabel>
+      <RegisterLabel>
         Password
-        <LoginInput
+        <RegisterInput
           placeholder="Enter your password"
+          autoComplete="new-password"
           type="password"
           name="password"
           inputmode="numeric"
           minlength="4"
           maxlength="8"
           size="8"
-          autoComplete="password"
+          required
         />
-      </LoginLabel>
+      </RegisterLabel>
 
       <Button
         type="submit"
@@ -76,8 +84,8 @@ export const LoginForm = () => {
           color: 'white',
         }}
       >
-        Log in
+        Register
       </Button>
-    </LoginFormStyle>
+    </RegisterFormStyle>
   );
 };

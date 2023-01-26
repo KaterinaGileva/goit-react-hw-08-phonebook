@@ -1,18 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-
+import {
+  useGetContactsQuery,
+  useCreateContactMutation,
+} from '..//../redux/contactsSliceApi';
 import {
   PhonebookForm,
   PhonebookLabel,
   PhonebookCheckbox,
   PhonebookCheckboxLabel,
 } from './ContactForm.styled';
+import { localStrg } from '../../helpers/localStrg';
 
-import { useCreateContactMutation,
-   useGetContactsQuery } from 'redux/contactsSliceApi';
-import { localStrg } from 'localStrg';
-import { Button, Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import { InputGroup, InputLeftElement, Button, Input } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
 
 export default function ContactForm() {
@@ -108,7 +109,7 @@ export default function ContactForm() {
           <Input
             type="text"
             placeholder="Print your name"
-            autoComplete="name"
+           
             name="name"
             value={name}
             onChange={handleChange}
@@ -134,7 +135,7 @@ export default function ContactForm() {
           <Input
             type="tel"
             placeholder="Phone number"
-            autoComplete="current-number"
+            
             name="number"
             value={number}
             onChange={handleChange}

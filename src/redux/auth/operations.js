@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../../node_modules/axios/index';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
