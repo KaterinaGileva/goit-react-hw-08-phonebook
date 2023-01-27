@@ -9,7 +9,7 @@ width: 150px;
     border: solid 1px green;
     font: inherit;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #00FFFF;
 
     :hover {
     background-color: #1565c0;

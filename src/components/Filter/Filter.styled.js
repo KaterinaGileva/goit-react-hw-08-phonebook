@@ -8,7 +8,10 @@ export const FilterLabel = styled.label`
   font-size: 20px;
   line-height: 1, 875;
   padding: 10px, 5px;
+  border: 2px solid #ADFF2F;
+  border-radius: 10px;
   margin: 0, 0, 0, 20px;
+  background-color: #ADFF2F;
 `;
 
 export const FilterInput = styled.input`
@@ -16,18 +19,19 @@ export const FilterInput = styled.input`
   padding: 8px;
   margin: 10px 0 10px 8px;
   max-width: 80%;
-  
+  border: 2px solid #32CD32;
   border-radius: 8px;
-  border-color: blue;
+  
 `;
 
 export const FilterDiv = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 20px;
+ 
 `;
 
 export const FilterTitle = styled.h2`
-  margin-left: 50px;
-  
+  margin-left: 20px;
+  font-size: 24px;
 `;

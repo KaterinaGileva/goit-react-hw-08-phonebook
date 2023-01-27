@@ -3,22 +3,14 @@ import { NavLink } from 'react-router-dom';
 
 export const UserNavConteiner = styled.div`
   display: flex;
-  
-  justify-content: space-between;
   max-width: auto;
-  margin: 20px;
-  padding: 20px;
-  border: 2px solid #dbb858;
-  border-radius: 10px;
-  background-color: #c3e6afea;
-
-  
+  padding: 20px 0px 20px 0px;
 `;
 
 export const Link = styled(NavLink)`
-  margin: 5px 40px 5px 0;
+  margin: 5px 20px 5px 0;
   padding: 8px 8px;
-  border: 2px solid blue;
+  border: 3px solid yellow;
   border-radius: 4px;
   text-decoration: none;
   color: black;
@@ -40,8 +32,7 @@ export const Link = styled(NavLink)`
 
 export const LogoutButton = styled.button`
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  
   margin-top: 20px;
   margin-right: auto;
   padding: 8px 8px 8px 8px;
@@ -53,7 +44,7 @@ export const LogoutButton = styled.button`
   line-height: 1, 875;
   text-transform: uppercase;
   background-color: #2196f3;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -70,9 +61,8 @@ export const LogoutButton = styled.button`
 
 export const UserNavText = styled.p`
   display: flex;
-  justify-content: center;
-
+  color: green;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 26px;
   margin: 10px 0 0 0;
 `;

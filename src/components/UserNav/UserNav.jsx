@@ -11,7 +11,7 @@ export const UserNav = () => {
   return (
     <>
       <UserNavText>
-        Welcome, {user.name}. Email: {user.email}
+        Welcome, {user.name}! Email: {user.email}
       </UserNavText>
 
       <UserNavConteiner>
@@ -28,7 +28,7 @@ export const UserNav = () => {
           _hover={{
             bg: 'messenger',
             color: 'red.500',
-            borderWidth: '1px',
+            borderWidth: '2px',
             borderColor: 'red',
           }}
           _active={{

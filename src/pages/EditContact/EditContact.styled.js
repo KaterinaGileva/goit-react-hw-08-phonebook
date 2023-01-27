@@ -39,9 +39,6 @@ export const ModalButton = styled.button`
   display: inline-flex;
   align-items: center;
   margin: 20px 0 0 0;
-  /* justify-content: center; */
-  /* margin-bottom: 20px; */
-  /* margin-right: auto; */
   padding: 8px 8px 8px 8px;
   border-radius: 4px;
   border: none;

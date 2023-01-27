@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactsTitle = styled.h2`
-  /* color: white; */
+ 
   display: flex;
   align-items: center;
   justify-content: center;
