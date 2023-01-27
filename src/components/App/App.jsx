@@ -2,22 +2,25 @@ import * as React from 'react';
 import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import NotFound from '../../pages/NotFound';
-import SharedLayout from '../SharedLayout/SharedLayout';
-import { PrivateRoute } from '../PrivateRoute';
-import { RestrictedRoute } from '../RestrictedRoute';
+import NotFound from 'pages/NotFound';
+
+
+
 import { refreshUser } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ChakraProvider } from '@chakra-ui/react';
+import { RestrictedRoute } from 'components/RestrictedRoute';
+import { PrivateRoute } from 'components/PrivateRoute';
+import SharedLayout from 'components/SharedLayout/SharedLayout';
 
-const Home = lazy(() => import('../../pages/Home/Home'));
-const NewContact = lazy(() => import('../../pages/NewContact/NewContact'));
-const EditContact = lazy(() => import('../../pages/EditContact/EditContact'));
-const Welcome = lazy(() => import('../../pages/Welcom/welcom'));
-const RegisterPage = lazy(() => import('../../pages/Register'));
-const LoginPage = lazy(() => import('../../pages/Login'));
+const Home = lazy(() => import('pages/Home/Home'));
+const NewContact = lazy(() => import('pages/NewContact/NewContact'));
+const EditContact = lazy(() => import('pages/EditContact/EditContact'));
+const Welcome = lazy(() => import('pages/Welcome/Welcome'));
+const RegisterPage = lazy(() => import('pages/Register'));
+const LoginPage = lazy(() => import('pages/Login'));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -53,7 +56,7 @@ export default function App() {
               }
             />
             <Route path="/" element={<Home />} />
-            <Route path="/welcom" element={<Welcome />} />
+            <Route path="/welcome" element={<Welcome />} />
             <Route path="/newcontact" element={<NewContact />} />
             <Route path="/:id" element={<EditContact />} />
             <Route path="*" element={<NotFound />}></Route>

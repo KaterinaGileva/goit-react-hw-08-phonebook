@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
-// import { useGetContactByIdQuery } from '../../redux/contactsSliceApi';
 import { Overlay, Modal, ModalTitle } from './EditContact.styled';
-import EditForm from '../../components/EditForm/EditForm';
+import EditForm from 'components/EditForm/EditForm';
 import { Button } from '@chakra-ui/react';
 
 export default function EditContact({ name, number }) {

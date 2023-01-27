@@ -3,9 +3,9 @@ import { selectFilterStatus, selectFilterValue } from 'redux/selectors';
 
 import { useSelector } from 'react-redux';
 import { ContactUl } from './ContactList.styled';
-import { useGetContactsQuery } from '..//../redux/contactsSliceApi';
+import { useGetContactsQuery } from 'redux/contactsSliceApi';
 import Contact from 'components/Contact/Contact';
-import { localStrg } from '../../helpers/localStrg';
+import { localStrg } from 'helpers/localStrg';
 
 export default function ContactList() {
   const filterValue = useSelector(selectFilterValue);

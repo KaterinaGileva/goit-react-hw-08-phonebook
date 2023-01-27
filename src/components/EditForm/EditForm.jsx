@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {
   useUpdateContactMutation,
   useGetContactsQuery,
-} from '../../redux/contactsSliceApi';
+} from 'redux/contactsSliceApi';
 import {
   EditPhonebookForm,
   EditPhonebookLabel,
@@ -10,7 +10,7 @@ import {
   EditPhonebookCheckbox,
   EditPhonebookCheckboxLabel,
 } from './EditForm.styled';
-import { localStrg } from '../../helpers/localStrg';
+import { localStrg } from 'helpers/localStrg';
 import { Button } from '@chakra-ui/react';
 
 export default function EditForm({ initialValues, onSubmit }) {

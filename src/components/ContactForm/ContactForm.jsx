@@ -4,14 +4,14 @@ import { toast } from 'react-toastify';
 import {
   useGetContactsQuery,
   useCreateContactMutation,
-} from '..//../redux/contactsSliceApi';
+} from 'redux/contactsSliceApi';
 import {
   PhonebookForm,
   PhonebookLabel,
   PhonebookCheckbox,
   PhonebookCheckboxLabel,
 } from './ContactForm.styled';
-import { localStrg } from '../../helpers/localStrg';
+import { localStrg } from 'helpers/localStrg';
 
 import { InputGroup, InputLeftElement, Button, Input } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';

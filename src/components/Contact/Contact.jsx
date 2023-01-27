@@ -4,16 +4,16 @@ import {
   ContactSpanDiv,
   ContactButtonDiv,
 } from './Contact.styled';
-import { useDeleteContactMutation } from '../../redux/contactsSliceApi';
+import { useDeleteContactMutation } from 'redux/contactsSliceApi';
 import { useNavigate } from 'react-router-dom';
 import { RiFunctionFill } from 'react-icons/ri';
 import { RiStarSFill } from 'react-icons/ri';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { RiEdit2Fill } from 'react-icons/ri';
-import { localStrg } from '../../helpers/localStrg';
+import { localStrg } from 'helpers/localStrg';
 
 export default function Contact({ id, name, number }) {
-   console.log('name:', {name,  id})
+   //console.log('name:', {name,  id})
   const navigate = useNavigate();
   const [deleteContact, { isLoading }] = useDeleteContactMutation();
   const RENDER_STORAGE_KEY = 'contact-for-render-state';
@@ -25,7 +25,7 @@ export default function Contact({ id, name, number }) {
     personal = currentContactsState.find(
       contact => contact.name === name
     ).personal;
-     console.log('personal', personal)
+     //console.log('personal', personal)
   }
 
   const handleDelete = async () => {

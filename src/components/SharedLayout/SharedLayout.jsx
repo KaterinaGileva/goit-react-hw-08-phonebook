@@ -4,7 +4,7 @@ import { useAuth } from 'hooks';
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { UserNav } from 'components/UserNav/UserNav';
 import { Container, Header, HeaderNav } from './SharedLayout.styled';
-import Spinner from '../Spinner/Spinner';
+import Spinner from 'components/Spinner/Spinner';
 
 export default function SharedLayout() {
   const { isLoggedIn } = useAuth();
