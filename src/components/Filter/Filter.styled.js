@@ -8,7 +8,7 @@ export const FilterLabel = styled.label`
   font-size: 20px;
   line-height: 1, 875;
   padding: 10px, 5px;
-  border: 2px solid #ADFF2F;
+  border: 2px solid #32CD32;
   border-radius: 10px;
   margin: 0, 0, 0, 20px;
   background-color: #ADFF2F;
