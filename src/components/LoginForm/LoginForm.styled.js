@@ -8,7 +8,7 @@ export const LoginFormStyle = styled.form`
   margin: 20px 0 0 0;
   padding: 20px;
   border-radius: 10px;
-  
+  background-color: #2196f3;
   
 `;
 

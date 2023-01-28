@@ -62,17 +62,19 @@ export const RegisterForm = () => {
 
       <Button
         type="submit"
-        colorScheme="messenger"
-        borderWidth="1px"
-        borderColor="messenger"
+        colorScheme="#00FFFF"
+        borderWidth="2px"
+        borderColor="yellow"
         m="6px auto 2px auto"
         p="2px 20px 4px 20px"
         fontSize="24px"
+        bg="yellow"
+        color="blue"
         _hover={{
           bg: 'messenger',
-          color: 'white',
+          color: 'blue',
           borderWidth: '1px',
-          borderColor: 'orange',
+          borderColor: 'yellow',
           fontSize: '26',
         }}
         _active={{
@@ -81,7 +83,7 @@ export const RegisterForm = () => {
         }}
         _selected={{
           bg: 'tomato',
-          color: 'white',
+          color: 'yellow',
         }}
       >
         Register

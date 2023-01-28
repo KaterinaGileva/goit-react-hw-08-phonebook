@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom';
 
 export const Link = styled(NavLink)`
   margin: 5px 40px 5px 0;
-  padding: 8px 8px;
+  padding: 5px 5px;
   border: 2px solid blue;
   border-radius: 4px;
   text-decoration: none;
   color: black;
   background-color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 

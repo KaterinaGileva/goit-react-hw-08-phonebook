@@ -7,6 +7,8 @@ export const RegisterFormStyle = styled.form`
   height: auto;
   margin: 20px 0 0 0;
   padding: 20px;
+  border-radius: 8px;
+  background-color: #2196f3;
 `;
 
 export const RegisterLabel = styled.label`
@@ -39,10 +41,10 @@ export const RegisterButton = styled.button`
   height: 30px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1, 875;
+  line-height: 1,875;
   text-transform: uppercase;
-  background-color: #2196f3;
-  color: #ffffff;
+  background-color: #00FFFF;
+  color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),

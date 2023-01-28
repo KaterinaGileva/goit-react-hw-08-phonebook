@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const ButtonFilter = styled.button`
 display: inline-flex;
 justify-content: center;
-width: 150px;
-    padding: 8px 8px;
+width: 130px;
+    padding: 3px 3px;
     border-radius: 8px;
-    border: solid 1px green;
-    font: inherit;
+    border: solid 2px #32CD32;
+    font-size:22px;
+    font-weight: 700;
     cursor: pointer;
     background-color: #00FFFF;
 

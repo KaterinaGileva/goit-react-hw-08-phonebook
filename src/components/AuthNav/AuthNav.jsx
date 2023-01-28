@@ -4,24 +4,31 @@ import { Button, ButtonGroup } from '@chakra-ui/react';
 export const AuthNav = () => {
   return (
     <>
-      <ButtonGroup gap="4" p="20px 0 20px 0">
+      <ButtonGroup gap="4"
+       p="20px 0 20px 0"
+       
+       >
         <Button
           as={NavLink}
-          to="/welcom"
+          to="/welcome"
           end
           colorScheme="messenger"
-          borderWidth="1px"
+          borderWidth="2px"
           borderColor="messenger"
+          fontSize={26}
+          bg='#00FF7F'
+          
           _hover={{
             bg: 'messenger',
             color: 'red.500',
-            borderWidth: '1px',
+            borderWidth: '2px',
             borderColor: 'red',
           }}
           _active={{
-            bg: 'tomato',
+            
             color: 'teal.500',
           }}
+         
           _selected={{
             bg: 'tomato',
             color: 'white',
@@ -34,21 +41,26 @@ export const AuthNav = () => {
           as={NavLink}
           to="/register"
           colorScheme="messenger"
-          borderWidth="1px"
+          borderWidth="2px"
           borderColor="messenger"
+          bg='#00FF7F'
+          fontSize={26}
+       
           _hover={{
             bg: 'messenger',
             color: 'red.500',
-            borderWidth: '1px',
+            borderWidth: '2px',
             borderColor: 'red',
           }}
           _active={{
             bg: 'tomato',
             color: 'teal.500',
           }}
-          _selected={{
-            bg: 'tomato',
-            color: 'white',
+          _focus={{
+            bg: 'messenger',
+            color: 'red.500',
+            borderWidth: '2px',
+            borderColor: 'red',
           }}
           variant="outline"
         >
@@ -58,21 +70,26 @@ export const AuthNav = () => {
           as={NavLink}
           to="/login"
           colorScheme="messenger"
-          borderWidth="1px"
+          borderWidth="2px"
           borderColor="messenger"
+          bg='#00FF7F'
+          fontSize={26}
+       
           _hover={{
             bg: 'messenger',
             color: 'red.500',
-            borderWidth: '1px',
+            borderWidth: '2px',
             borderColor: 'red',
           }}
           _active={{
             bg: 'tomato',
             color: 'teal.500',
           }}
-          _selected={{
-            bg: 'tomato',
-            color: 'white',
+          _focus={{
+            bg: 'messenger',
+            color: 'red.500',
+            borderWidth: '2px',
+            borderColor: 'red',
           }}
           variant="outline"
         >

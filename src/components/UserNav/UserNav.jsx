@@ -18,26 +18,28 @@ export const UserNav = () => {
         <Button
           as={NavLink}
           to="/"
-          end
+          color="blue"
           colorScheme="messenger"
-          borderWidth="1px"
+          borderWidth="2px"
           borderColor="messenger"
           type="button"
           mr="20px"
-          fontSize={28}
+          fontSize={26}
+          bg='#00FF7F'
           _hover={{
-            bg: 'messenger',
             color: 'red.500',
-            borderWidth: '2px',
+            borderWidth: '3px',
             borderColor: 'red',
           }}
           _active={{
             bg: 'tomato',
             color: 'teal.500',
           }}
-          _selected={{
-            bg: 'tomato',
-            color: 'white',
+          _focus={{
+            bg: 'messenger',
+            color: 'red.500',
+            borderWidth: '2px',
+            borderColor: 'red',
           }}
           variant="outline"
         >
@@ -46,24 +48,27 @@ export const UserNav = () => {
         <Button
           as={NavLink}
           to="/newcontact"
+          color="blue"
           colorScheme="messenger"
-          borderWidth="1px"
+          borderWidth="2px"
           borderColor="messenger"
           mr="20px"
-          fontSize={28}
+          fontSize={26}
+          bg='#00FF7F'
           _hover={{
-            bg: 'messenger',
             color: 'red.500',
-            borderWidth: '1px',
+            borderWidth: '3px',
             borderColor: 'red',
           }}
-          _active={{
-            bg: 'tomato',
-            color: 'teal.500',
+          _focus={{
+            bg: 'messenger',
+            color: 'red.500',
+            borderWidth: '2px',
+            borderColor: 'red',
           }}
           _selected={{
             bg: 'tomato',
-            color: 'white',
+            color: 'red',
           }}
           variant="outline"
         >
@@ -73,26 +78,29 @@ export const UserNav = () => {
         <Button
           as={NavLink}
           to="/login"
-          color="white"
+          color="blue"
           colorScheme="messenger"
-          borderWidth="3px"
-          borderColor="white"
+          borderWidth="2px"
+          borderColor="blue"
+          fontSize={26}
+          
           onClick={() => dispatch(logOut())}
           type="button"
-          fontSize={28}
+          bg='#00FF7F'
           _hover={{
-            bg: 'messenger',
             color: 'red.500',
             borderWidth: '3px',
             borderColor: 'red',
           }}
-          _active={{
-            bg: 'tomato',
-            color: 'teal.500',
+          _focus={{
+            bg: 'messenger',
+            color: 'red.500',
+            borderWidth: '2px',
+            borderColor: 'red',
           }}
           _selected={{
             bg: 'tomato',
-            color: 'white',
+            color: 'yellow',
           }}
         >
           Logout

@@ -9,18 +9,18 @@ export const UserNavConteiner = styled.div`
 
 export const Link = styled(NavLink)`
   margin: 5px 20px 5px 0;
-  padding: 8px 8px;
+  padding: 5px 5px;
   border: 3px solid yellow;
   border-radius: 4px;
   text-decoration: none;
-  color: black;
-  background-color: #fff;
+  
+  
   font-size: 24px;
   font-weight: 700;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &.active {
-    color: white;
+    color: orange;
     background-color: #1565c0;
     box-shadow: 2px 2px 5px #fc894d;
   }
@@ -44,7 +44,7 @@ export const LogoutButton = styled.button`
   line-height: 1, 875;
   text-transform: uppercase;
   background-color: #2196f3;
-  color: #fff;
+  color: orange;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -53,7 +53,7 @@ export const LogoutButton = styled.button`
   :hover,
   :focus {
     border: 2px solid;
-    background-color: #21d4f3;
+    background-color: red;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transform: scale(1.01);
   }
@@ -61,7 +61,6 @@ export const LogoutButton = styled.button`
 
 export const UserNavText = styled.p`
   display: flex;
-  color: green;
   font-weight: 700;
   font-size: 26px;
   margin: 10px 0 0 0;
