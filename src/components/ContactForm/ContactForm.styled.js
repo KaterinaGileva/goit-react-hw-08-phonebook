@@ -10,7 +10,7 @@ export const PhonebookForm = styled.form`
   border: 2px solid #dbb858;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #AFEEEE;
+  background-color: #ADFF2F;
 `;
 
 export const PhonebookLabel = styled.label`
@@ -34,7 +34,7 @@ export const PhonebookInput = styled.input`
   margin: 8px 0 8px 0;
   max-width: 80%;
   border-radius: 8px;
-  border-color: blue;
+  border-color: #32CD32;
 `;
 
 export const PhonebookButton = styled.button`

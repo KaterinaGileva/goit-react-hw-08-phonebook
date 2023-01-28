@@ -12,7 +12,7 @@ export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 50px; */
+  
 `;
 
 export const Modal = styled.div`
@@ -24,8 +24,8 @@ export const Modal = styled.div`
   padding: 15px;
   min-height: 40%;
   min-width: 40%;
-  background-color: #bbd;
-  border: 3px solid red;
+  background-color: #00FF7F;
+  border: 3px solid #32CD32;
   border-radius: 10px;
 `;
 

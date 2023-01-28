@@ -14,14 +14,14 @@ width: 130px;
 
     :hover {
     background-color: #1565c0;
-    color: #fff;
+    color: orange;
     transform: scale(1.02);
   }
   
   :active {
-    border: solid 2px white;
-    background-color: #1565c0;
-    color: #fff;
+    border: solid 2px red;
+    
+    color: orange;
     box-shadow: 2px 2px 5px #fc894d;
   }
 

@@ -116,7 +116,7 @@ export default function ContactForm() {
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
-            borderColor="blue"
+            borderColor="#32CD32"
             bg="white"
             size="lg"
             fontSize="24px"
@@ -142,7 +142,7 @@ export default function ContactForm() {
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
-            borderColor="blue"
+            borderColor="#32CD32"
             bg="white"
             size="lg"
             fontSize="24px"
@@ -158,12 +158,13 @@ export default function ContactForm() {
         borderColor="messenger"
         m="6px auto 2px auto"
         p="2px 20px 4px 20px"
+        color='yellow'
         fontSize="24px"
         _hover={{
           bg: 'messenger',
-          color: 'white',
+          color: 'yellow',
           borderWidth: '1px',
-          borderColor: 'orange',
+          borderColor: 'blue',
           fontSize: '25',
         }}
         _active={{
@@ -172,7 +173,7 @@ export default function ContactForm() {
         }}
         _selected={{
           bg: 'tomato',
-          color: 'white',
+          color: 'yellow',
         }}
       >
         Add contact

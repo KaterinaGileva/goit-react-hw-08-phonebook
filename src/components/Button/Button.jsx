@@ -11,7 +11,7 @@ export const Button = ({
       style={
         selected === false
           ? { backgroundColor: `#00FFFF`, color: `#000` }
-          : { backgroundColor: `#1976d2`, color: `#fff`,
+          : { backgroundColor: `#00FFFF`, color: `red`,
               border: 'solid' }
       }
       type={type}
