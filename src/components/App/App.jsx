@@ -67,7 +67,7 @@ export default function App() {
                 <PrivateRoute redirectTo="/login" component={<EditContact />} />
               }
               />
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<LoginPage />} />
             <Route path="/welcome" element={<Welcome />} />
             
             <Route path="*" element={<NotFound />}></Route>
