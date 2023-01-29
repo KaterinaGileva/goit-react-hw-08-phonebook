@@ -55,10 +55,21 @@ export default function App() {
                 <PrivateRoute redirectTo="/login" component={<Home />} />
               }
             />
+            <Route 
+              path="/newcontact" 
+              element={
+                <PrivateRoute redirectTo="/login" component={<NewContact />} />
+              }
+            />
+            <Route 
+              path="/:id" 
+              element={
+                <PrivateRoute redirectTo="/login" component={<EditContact />} />
+              }
+              />
             <Route path="/" element={<Home />} />
             <Route path="/welcome" element={<Welcome />} />
-            <Route path="/newcontact" element={<NewContact />} />
-            <Route path="/:id" element={<EditContact />} />
+            
             <Route path="*" element={<NotFound />}></Route>
           </Route>
         </Routes>
